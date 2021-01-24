@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"set": "cpp",
+			"algorithm": "cpp",
+			"vector": "cpp",
+			"map": "cpp",
+			"cstdlib": "cpp"
+		}
+	}
+}
