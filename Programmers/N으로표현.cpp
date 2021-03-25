@@ -6,7 +6,10 @@ using namespace std;
 int minCnt = 9;
 
 void dfs(int N, int number, int cnt, int num) {
-    if(cnt > 8) return; // 8번 초과하면 return
+     // 8번 초과하면 return
+    if(cnt > 8)
+        return;
+
     // 최솟값 계산
     if(number == num) {
         if(minCnt > cnt) minCnt = cnt;
