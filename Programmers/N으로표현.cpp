@@ -6,7 +6,7 @@ using namespace std;
 int minCnt = 9;
 
 void dfs(int N, int number, int cnt, int num) {
-     // 8번 초과하면 return
+     // N 사용횟수가 8번 초과하면 return
     if(cnt > 8)
         return;
 
