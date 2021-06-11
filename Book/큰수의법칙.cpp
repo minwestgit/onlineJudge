@@ -1,9 +1,10 @@
+#include <iostream>
 #include <vector>
 #include <algorithm>
 
 using namespace std;
 
-string solution(vector<int> numbers) {
+int main(int argc, const char * argv[]) {
     
     int N, M, K;
     vector<int> a(N);
