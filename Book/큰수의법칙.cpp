@@ -26,5 +26,5 @@ int main(int argc, const char * argv[]) {
 
     cout << ans;
 
-    return answer;
+    return 0;
 }
