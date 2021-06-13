@@ -14,6 +14,7 @@ int main(int argc, const char * argv[]) {
     string plans;
 
     cin >> n;
+    cin.ignore();
     getline(cin, plans);
 
     for(int i=0;i<plans.size();i++) {
