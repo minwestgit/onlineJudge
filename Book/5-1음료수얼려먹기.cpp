@@ -33,7 +33,7 @@ int main(int argc, const char * argv[]) {
 
     int ans = 0;
     for(int i=0;i<n;i++) {
-        for(int j=0;j<m;j++) { 2
+        for(int j=0;j<m;j++) {
             if(dfs(i,j)) {
                 ans++;
             }
