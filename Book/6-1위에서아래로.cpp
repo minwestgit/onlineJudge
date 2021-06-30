@@ -16,7 +16,7 @@ int main(int argc, const char * argv[]) {
         v.push_back(x);
     }
 
-    sort(v.begin(), v.end(), greater<int>());
+    sort(v.begin(), v.end(), greater<int>());   
 
     for(int i=0;i<n;i++) {
         cout << v[i] << ' '; 
