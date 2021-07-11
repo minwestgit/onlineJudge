@@ -12,7 +12,7 @@ int main(int argc, const char * argv[]) {
     cin >> x;
     d[0] = d[1] = 0;
 
-    // bottom_up
+    // bottom-up
     for (int i=2;i<=x;i++) {
 
         // 현재의 수에서 1을 빼는 경우
