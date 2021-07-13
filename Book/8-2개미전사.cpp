@@ -11,7 +11,7 @@ vector<int> arr;
 int main(int argc, const char * argv[]) {
     
     cin >> n;
-    for (int i = 0; i < n; i++) {
+    for (int i=0;i<n;i++) {
         int x;
         cin >> x;
         arr.push_back(x);
