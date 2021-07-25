@@ -15,7 +15,6 @@ using namespace std;
 // 노드의 개수(N), 간선의 개수(M)
 // 노드의 개수는 최대 500개라고 가정
 int n, m;
-// 2차원 배열(그래프 표현)를 만들기
 int graph[501][501];
 
 int main(int argc, const char * argv[]) {
