@@ -11,11 +11,6 @@ int parent[100001];
 vector<pair<int, pair<int, int> > > edges;
 int result = 0;
 
-/*
-findParent, unionParent는
-C++ STL 라이브러리에 포함되어 있지만
-여기서는 직접 구현함.
-*/
 int findParent(int x) {
     // 루트 노드가 아니라면, 루트 노드를 찾을 때까지 재귀적으로 호출
     if(x == parent[x]) {
@@ -48,7 +43,7 @@ int main(int argc, const char * argv[]) {
     for(int i=0;i<e;i++) {
         int a, b, cost;
         cin >> a >> b >> cost;
-        edges.push_back(make_pair(cost,make_pair(a,b));
+        edges.push_back(make_pair(cost,make_pair(a,b)));
     }
 
     sort(edges.begin(), edges.end());
