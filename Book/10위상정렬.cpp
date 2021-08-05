@@ -40,7 +40,7 @@ void topologySort() {
     }
 
     // 위상 정렬을 수행한 결과 출력
-    for (int i=0;i<result.size();i++) {
+    for(int i=0;i<result.size();i++) {
         cout << result[i] << ' ';
     }
 }

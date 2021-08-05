@@ -36,7 +36,7 @@ int main(int argc, const char * argv[]) {
     cin >> v >> e;
 
     // 부모 테이블상에서, 부모를 자기 자신으로 초기화
-    for (int i=1;i<=v;i++) {
+    for(int i=1;i<=v;i++) {
         parent[i] = i;
     }
 
