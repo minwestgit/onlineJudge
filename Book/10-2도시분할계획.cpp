@@ -53,7 +53,7 @@ int main(int argc, const char * argv[]) {
         int a = edges[i].second.first;
         int b = edges[i].second.second;
         // 사이클이 발생하지 않는 경우에만 집합에 포함
-        if(findParent(a) != findParent(b)) {®
+        if(findParent(a) != findParent(b)) {
             unionParent(a,b);
             result += cost;
             last = cost;
