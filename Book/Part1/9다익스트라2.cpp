@@ -2,6 +2,7 @@
 #include <vector>
 #include <algorithm>
 #include <queue>
+#include <cstring>
 #define INF 1e9
     
 using namespace std;
