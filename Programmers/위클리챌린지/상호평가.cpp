@@ -19,7 +19,7 @@ string calcAvg(int sum, int n) {
     return ans;
 }
 
-string solution(vector<vector<int>> scores) {
+string solution(vector<vector<int> > scores) {
     string answer = "";
     vector<int> tmp; // 학생별 점수 저장
     int n = scores.size();
