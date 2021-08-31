@@ -1,4 +1,7 @@
 #include <algorithm>
+#include <vector>
+
+using namespace std;
 
 int solution(vector<int> &A) {
     int oneCnt = 0;
