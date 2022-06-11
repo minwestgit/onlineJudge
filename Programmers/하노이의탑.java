@@ -10,7 +10,7 @@ class Move {
     }
 }
 
-class Solution {
+class 하노이의탑 {
     public static List<Move> list = new ArrayList<>();
     public int[][] solution(int n) {
         hanoi(n, 1, 2, 3);
