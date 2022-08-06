@@ -3,7 +3,7 @@ class Solution {
     public String solution(String X, String Y) {
         String answer = "";
 
-        StringBuilder result = new StringBuilder();
+        StringBuilder result = new StringBuilder(); //StringBuilder가 더 빠름. String 쓰면 오답.
         String[] xx = X.split("");
         String[] yy = Y.split("");
         Arrays.sort(xx, Collections.reverseOrder()); Arrays.sort(yy, Collections.reverseOrder());
