@@ -3,7 +3,8 @@ class Solution {
     public int solution(int[] order) {
         int answer = 0;
         Stack<Integer> s = new Stack<>();
-        int i = 1; int idx = 0;
+        int i = 1; //1번부터 시작
+        int idx = 0;
         while(idx < order.length) {
             if(order[idx] == i) {
                 answer += 1;
