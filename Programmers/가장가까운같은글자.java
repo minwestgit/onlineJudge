@@ -6,7 +6,7 @@ class Solution {
         Arrays.fill(alpha, -1);
         
         for(int i = 0; i < s.length(); i++) {
-            int index = (int)s.charAt(i)-97;
+            int index = (int)s.charAt(i)-97; //알파벳index
             if(alpha[index] == -1) answer[i] = -1;
             else answer[i] = i-alpha[index];
             alpha[index] = i;
