@@ -4,7 +4,6 @@ class Solution {
     public static int today_month;
     public static int today_day;
     public int[] solution(String today, String[] terms, String[] privacies) {
-        //int[] answer = {};
         List<Integer> answer = new ArrayList<>();
         today_year = Integer.parseInt(today.substring(0,4));
         today_month = Integer.parseInt(today.substring(5,7));
@@ -33,6 +32,7 @@ class Solution {
         int info_year = Integer.parseInt(info_date.substring(0,4));
         int info_month = Integer.parseInt(info_date.substring(5,7));
         int info_day = Integer.parseInt(info_date.substring(8,10)) - 1;
+        //약관별 유효기간 계산
         info_year += term_day/12;
         info_month += term_day%12;
         if(info_month > 12) {
@@ -40,6 +40,7 @@ class Solution {
             info_year += 1;
         }
         
+        //오늘날짜와 비교해 파기여부 체크
         if(today_year > info_year) return false;
         if(today_year==info_year && today_month > info_month) return false;
         if(today_year==info_year && today_month == info_month && today_day > info_day) return false;
