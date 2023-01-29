@@ -5,16 +5,12 @@ class Solution {
         Arrays.fill(answer, -1);
         
         Stack<Integer> stack = new Stack<>();
-        for(int i = 0; i < numbers.length; i++) {
-            if(stack.isEmpty() || numbers[i] < numbers[stack.peek()]) {
-                stack.push(i);
+        stack.push(0);
+        for(int i = 1; i < numbers.length; i++) {
+            while(!stack.isEmpty() && numbers[i] > numbers[stack.peek()]) {
+                answer[stack.pop()] = numbers[i];
             }
-            else {
-                while(!stack.isEmpty() && numbers[i] > numbers[stack.peek()]) {
-                    answer[stack.pop()] = numbers[i];
-                }
-                stack.push(i);
-            }
+            stack.push(i);
         }
         
         return answer;
