@@ -13,22 +13,22 @@ class Solution {
             }
         }
         
-        for(int i = 0; i < map.length; i++){
-            for(int j = 0; j < map[i].length; j++){
-                if(!visit[i][j] && map[i][j] != 'X'){
+        for(int i = 0; i < map.length; i++) {
+            for(int j = 0; j < map[i].length; j++) {
+                if(!visit[i][j] && map[i][j] != 'X') { //새로운 무인도 발견
                     Queue<Island> q = new LinkedList<>();
                     q.add(new Island(i,j));
                     visit[i][j] = true;
                     int sum = map[i][j]-'0';
-                    while(!q.isEmpty()){
+                    while(!q.isEmpty()) { //무인도 탐색
                         Island now = q.poll();
                         for(int k = 0; k < 4; k++){
-                            int y = now.y + dy[k];
                             int x = now.x + dx[k];
-                            if(y>=0 && y<map.length && x>=0 && x<map[0].length && !visit[y][x] && map[y][x]!='X'){
-                                q.add(new Island(y,x));
-                                sum += map[y][x]-'0';
-                                visit[y][x]=true;
+                            int y = now.y + dy[k];
+                            if(x>=0 && x<map.length && y>=0 && y<map[0].length && !visit[x][y] && map[x][y]!='X') {
+                                q.add(new Island(x,y));
+                                sum += map[x][y]-'0';
+                                visit[x][y] = true;
                             }
                         }
                     }
@@ -44,20 +44,13 @@ class Solution {
                 .mapToInt(Integer::intValue)
                 .toArray();
     }
-    
-    public int dfs(int x, int y, String[] maps, boolean[][] visit) {
-        if(x<0 || x>=maps.length || y<0 || y>=maps[0].length() || visit[x][y] || maps[x].charAt(y) == 'X') return 0;
-        visit[x][y] = true;
-        return (maps[x].charAt(y)-'0')
-            + dfs(x+1, y, maps, visit) + dfs(x-1, y, maps, visit) + dfs(x, y+1, maps, visit) + dfs(x, y-1, maps, visit);
-    }
 }
 
 class Island {
     int y, x;
     
-    public Island(int y, int x){
-        this.y = y;
+    public Island(int x, int y) {
         this.x = x;
+        this.y = y;
     }
 }
